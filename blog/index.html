@@ -60,7 +60,7 @@
 
             <!-- name-and-slogan -->
             <div class="site-name-and-slogan smooth-scroll">
-              <div class="site-name"><a href="#banner">Global IT Solutions</a></div>
+              <div class="site-name"><a href="/">Global IT Solutions</a></div>
               <div class="site-slogan">Solutions for a non-stop world</div>
             </div>
 
@@ -96,12 +96,11 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                      <li><a href="/">Home</a></li>
                       <li><a href="/#about">About</a></li>
                       <li><a href="/#services">Services</a></li>
                       <li><a href="/#clients">Clients</a></li>
-                      <li class="active"><a href="/blog">Blog</a></li>
                       <li><a href="/#contact">Contact</a></li>
+                      <li class="active"><a href="/blog">Blog</a></li>
                     </ul>
                   </div>
 
@@ -121,43 +120,55 @@
   </header>
   <!-- header end -->
 
-  <div class="section clearfix">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="tags">
-            {% for tag in site.tags %}
-            {% assign t = tag | first %}
-            {% assign posts = tag | last %}
-            <li>{{t | downcase | replace:" ","-" }} has {{ posts | size }} posts</li>
-            {% endfor %}
-          </ul>
-          <ul class="posts">
-            {% for post in site.posts limit:20 %}
-            <li>
-              <span>{{ post.date | date_to_string }}</span> &raquo;
-              <a href="{{ BASE_PATH }}{{ post.url }}">
-                {{ post.title }}</a>
-              </li>
-              {% endfor %}
-            </ul>
+  <div id="wrap">
+
+    <div id="main">
+      <div class="section clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="tags">
+                {% for tag in site.tags %}
+                {% assign t = tag | first %}
+                {% assign posts = tag | last %}
+                <li>{{t | downcase | replace:" ","-" }} has {{ posts | size }} posts</li>
+                {% endfor %}
+              </ul>
+              <ul class="posts">
+                {% for post in site.posts limit:20 %}
+                <li>
+                  <span>{{ post.date | date_to_string }}</span> &raquo;
+                  <a href="{{ BASE_PATH }}{{ post.url }}">
+                    {{ post.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
+
   </div>
 
-  <!-- .subfooter start -->
-  <!-- ================ -->
-  <div class="subfooter navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="text-center">Copyright © 2014. Global IT Solutions S.R.L. | All rights reserved.</p>
+    <!-- .subfooter start -->
+    <!-- ================ -->
+    <div id="footer" class="subfooter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright © 2014. Global IT Solutions S.R.L. | All rights reserved.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- .subfooter end -->
+    <!-- .subfooter end -->
+
+    <div class="scroll-top-wrapper ">
+      <span class="scroll-top-inner">
+        <i class="fa fa-2x fa-arrow-circle-up"></i>
+      </span>
+    </div>
 
 <!-- JavaScript files placed at the end of the document so the pages load faster
 ================================================== -->
