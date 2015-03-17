@@ -76,3 +76,19 @@ body:before {
 }
 
 .btn-round { border-radius: 5px;}
+
+.main-navigation .navbar-default .navbar-nav .divider-vertical {
+  padding-top: 29px;
+  padding-bottom: 29px;
+  padding-left: 10px;
+  padding-right: 20px;
+  font-size: 30px;
+  font-weight: 300;
+  color: #339BEB;
+  line-height: 20px;
+}
+
+.fixed-header-on .navbar-default .navbar-nav .divider-vertical {
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
